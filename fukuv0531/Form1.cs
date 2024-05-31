@@ -26,6 +26,22 @@ namespace fukuv0531
             label1.Text = "Å´";
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            vx = -15;
+            timer1.Enabled = false;
+            timer2.Enabled = true;
+            label1.Text = "Å©";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            vx = 15;
+            timer1.Enabled = false;
+            timer2.Enabled = true;
+            label1.Text = "Å®";
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Top += vy;
@@ -43,20 +59,16 @@ namespace fukuv0531
             label1.Text = "ç‚ñ{îéìl";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            vx = -15;
-            timer1.Enabled = false;
-            timer2.Enabled = true;
-            label1.Text = "Å©";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            vx = 15;
-            timer1.Enabled = false;
-            timer2.Enabled = true;
-            label1.Text = "Å®";
+            float fw = 3.14f;
+            string str = $"{fw}";
+            int a = (int)fw;
+            //MessageBox.Show($"{a}");
+            str = "3";
+            a = int.Parse(str);
+            fw = a;
+            fw = float.Parse(str);
         }
     }
 }
